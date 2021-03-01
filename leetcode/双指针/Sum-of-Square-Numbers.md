@@ -55,3 +55,21 @@ var judgeSquareSum = function(c) {
 };
 
 ```
+
+#### Python
+
+```python
+class Solution:
+    def judgeSquareSum(self, c: int) -> bool:
+        i = 0
+        j = (int) (math.sqrt(c))
+        while i<j:
+            sum = i*i + j*j
+            if sum == c:
+                return True
+            elif sum > c:
+                j -= 1
+            else:
+                i += 1
+        return False
+```

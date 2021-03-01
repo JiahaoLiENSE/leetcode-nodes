@@ -18,6 +18,7 @@ class Solution {
     Arrays.asList('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'));
         
     public String reverseVowels(String s) {
+        if(s == null) return null;
         int i = 0;
         int j = s.length() - 1;
         char [] result = s.toCharArray();

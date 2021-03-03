@@ -13,7 +13,19 @@ Output: `[1]`
 #### Java
 ```java
 /*
-
+    The idea is to find the frequency of each number
+    Group them by frequency
+    return the K frequent element
+    exemple: [5,5,5,4,7,3,3,7,9,6,6,3]
+    5[3], 4[1], 7[2], 3[3], 9[1], 6[2]
+    Grouped by frequency we have: 3[5, 3], 1[4, 9], 2[7, 6]
+    By looking at the table of frequencies we see that
+    the k(2) most frequent elements are 5 and 3
+    the k(3) most frequent elements are 5, 3 and 7
+    the k(4) most frequent elements are 5, 3, 7 and 6
+    ....
+    time: O(n)
+    space: O(n)
 */
 class Solution {
     public int[] topKFrequent(int[] nums, int k) {

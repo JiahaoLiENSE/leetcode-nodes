@@ -47,3 +47,20 @@ class Solution {
 }
 ```
 #### Python
+```python
+class Solution:
+    def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
+        if len(intervals) == 0:
+            return 0
+        intervals.sort(key = lambda x : x[1])
+        overLaps = 0
+        left = 0
+        right = 1
+        for i in range(right, len(intervals)):
+            if intervals[right][0] < intervals[left][1]:
+                overLaps += 1
+            else:
+                left = right
+            right += 1
+        return overLaps
+```

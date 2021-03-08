@@ -45,7 +45,11 @@ class Solution:
             return 0
         if len(points) == 1:
             return 1
-        points.sort(key = lambda x: x[1])  // For lambda -> https://www.w3schools.com/python/python_lambda.asp
+        
+        """
+        For lambda -> https://www.w3schools.com/python/python_lambda.asp
+        """
+        points.sort(key = lambda x: x[1]) 
         nonOverLaps = 1
         right = points[0][1]
         for i in range(1, len(points)):

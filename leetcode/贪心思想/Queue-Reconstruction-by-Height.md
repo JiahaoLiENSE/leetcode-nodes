@@ -15,8 +15,17 @@ Person 4 has height 4 with four people taller or the same height in front, which
 Person 5 has height 7 with one person taller or the same height in front, which is person 1.
 Hence [[5,0],[7,0],[5,2],[6,1],[4,4],[7,1]] is the reconstructed queue.
 ```
+#### Solving Logic
+```
+1. Between different h, pick person with larger h first
+2. Between different k, pick person with smaller k first (in the same h)
+3. we put the person with larger k and then put the person with smaller k, the situation of the former will be changed by the latter one.
+```
 #### Java
 ```java
+/*
+    Java list.add(int index, element) -> https://www.journaldev.com/33297/java-list-add-addall-methods
+*/
 class Solution {
     public int[][] reconstructQueue(int[][] people) {
         if(people.length == 1) return people;

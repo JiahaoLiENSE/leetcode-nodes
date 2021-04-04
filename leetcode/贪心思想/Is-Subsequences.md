@@ -1,6 +1,22 @@
-###
+### 392. Is Subsequence
 #### Description
+```
+Given two strings s and t, check if s is a subsequence of t.
+
+A subsequence of a string is a new string that is formed from the original string by deleting some (can be none)
+of the characters without disturbing the relative positions of the remaining characters. (i.e., "ace" is
+a subsequence of "abcde" while "aec" is not).
+```
 #### Example
+```
+Input: s = "abc", t = "ahbgdc"
+Output: true
+```
+
+```
+Input: s = "axc", t = "ahbgdc"
+Output: false
+```
 #### Java
 ```java
 // Compare each chars between s and t to see if chars of t are matching or not by iterating from begin.
